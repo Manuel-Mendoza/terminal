@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" {% static 'base/fontawesome-free/css/all.min.css' %}" type="text/css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href=" {% static 'base/css/adminlte.min.css' %} ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+
+    <title>{% block title %} Ingresar {% endblock %}</title>
+</head>
+<body class="login-page" style="min-height: 496.391px;">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="{% url 'vista' %}"><b>UT Terminal </b>Tunja</a>
+      </div>
+      <!-- /.login-logo -->
+      <div class="card">
+        <div class="card-body login-card-body">
+          <p class="login-box-msg">Ingresa tu usuario y contraseña.</p>
+    
+          <form method="POST">
+            {% csrf_token %} 
+            {% if form.non_field_errors %}
+              <p class="small alert alert-dismissible alert-danger text-center"> ¡Usuario o Contraseña <strong>Incorrecto</strong>!, intenta nuevamente.</p>
+            {% endif %}
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Usuario" name="username" autocomplete="off">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-envelope"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" placeholder="Contraseña" name="password" autocomplete="off">
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              
+              <!-- /.col -->
+              <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+              </div>
+              <!-- /.col -->
+            </div>
+          </form>
+        </div>
+        <!-- /.login-card-body -->
+      </div>
+    </div>
+    <!-- /.login-box -->
+
+
+    <script src="{% static 'base/jquery/jquery.min.js' %} "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="{% static 'base/js/adminlte.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script>
+
+    </script>
+
+</body>
+</html>

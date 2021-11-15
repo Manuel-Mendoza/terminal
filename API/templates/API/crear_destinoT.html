@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %} Nuevo Destino Turistico {% endblock %}
+{% block contenido %}
+
+<!-- Select multiple -->
+<div class="card-body">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+          <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %} 
+            <label for="id_destinos">Seleccione los Destinos</label>
+            {{form.destinos|attr:'name:destinos'|add_class:'select2'|attr:'multiple:multiple'|attr:'data-placeholder:Selecciona los destinos'|attr:'style:width:100%'}}
+            <button type="submit" class="btn btn-primary mt-5">Guardar</button>
+          </form>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
