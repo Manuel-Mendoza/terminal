@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(abf72zx&ij9u#$0!oq$i3yyrx_4c77roi3c4a*-o6do*tdhet'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -79,14 +79,13 @@ WSGI_APPLICATION = 'CONFIG.wsgi.application'
 #Database
 #https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dfmtd9kjmktb0j',
+        'NAME': 'dbv6uu73dl51n5',
         'HOST': 'ec2-18-207-72-235.compute-1.amazonaws.com',
-        'USER': 'jromnvlnciyadu',
-        'PASSWORD': 'b0a1080c3cd0b7fb1e71c4b78a731b0b3f5126994b5590448d29cce3fc121abf',
+        'USER': 'weorvtuobcgkxg',
+        'PASSWORD': 'f79ccd010c654db9c0032a4f0d18c174f7a66c40b4a6872da51750d439469760',
         'PORT': 5432,
     }
 }
@@ -98,6 +97,7 @@ DATABASES = {
     }
 }
 
+"""
 
 
 
